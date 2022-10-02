@@ -3,31 +3,23 @@
 
 <link type="text/css" href="static\styles\home.css" rel="stylesheet" />
 
-<div id="app">
-    <div>{{counter}}</div>
-    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top"
-        data-bs-title="Tooltip on top" @click="counter++">
-        Tooltip on top
+<div id="app" class="container mx-3 my-3 bg-primary" style="height: 95%;">
+    <h2> counter : {{counter}}</h2>
+    <button type="button" class="btn btn-secondary mx-3" data-bs-toggle="tooltip" data-bs-placement="top"
+        data-bs-title="++" @click="counter++">
+        Plus counter
     </button>
-    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right"
-        data-bs-title="Tooltip on right" @click="counter--">
-        Tooltip on right
-    </button>
-    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom"
-        data-bs-title="Tooltip on bottom">
-        Tooltip on bottomff
-    </button>
-    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left"
-        data-bs-title="Tooltip on left">
-        Tooltip on leftkl;kl;
+    <button type="button" class="btn btn-warning mx-3" data-bs-toggle="tooltip" data-bs-placement="bottom"
+        data-bs-title="--" @click="counter--">
+        Minus counter
     </button>
 </div>
 
+
+<script src="static\js\home.js" type="text/javascript"></script>
 <script>
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 </script>
-<script src="static\js\home.js" type="text/javascript"></script>
-
 
 {% endblock %}
