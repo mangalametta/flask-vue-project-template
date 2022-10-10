@@ -1,11 +1,13 @@
 const app = Vue.createApp({
     data() {
         return {
-            counter:0,
+            counter: 0,
+            response: '',
         }
     },
     methods: {
-        initHomeStatus: function () {
+        initHomeStatus: async function () {
+            this.response = await getInfoFromBackend('hello')
             console.log("finish init")
         },
     },
