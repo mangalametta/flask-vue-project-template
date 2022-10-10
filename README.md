@@ -5,6 +5,7 @@ My template project with
     Backend sever :  Flask
     Frontend framework : Vue 3
     UI toolkit : Bootstrap 5
+    http requests: Axios
 
 ## Getting Started
 
