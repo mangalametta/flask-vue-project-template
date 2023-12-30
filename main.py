@@ -37,6 +37,10 @@ def direction_control():
     resData = text + ' ,I got you back'
     return response(0, 'success', resData)
 
+@app.route('/test', methods=['GET'])
+def test():
+    return response(0, 'success', "test")
+
 
 def main():
 
